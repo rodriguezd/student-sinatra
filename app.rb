@@ -10,14 +10,9 @@ module StudentSite
       erb :'students/index'
     end
 
-    # get '/hello-world' do
-    #   @random_numbers = (1..20).to_a
-    #   erb :hello
-    # end
-
-    # get '/artists' do
-    #   @artists = "Larry, Curly, and Moe"
-    #   erb :artists
-    # end
+    get '/students/:name' do
+      @student = Student.find_by_name("#{params[:name]}")
+      erb :'students/student', :layout => :student_layout
+    end
   end
 end
