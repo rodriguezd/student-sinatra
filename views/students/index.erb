@@ -3,7 +3,7 @@
     <% @students.each do |student| %>
       <li class="home-blog-post">
                 <div class="blog-thumb">
-                  <a href="students/<%= student.name%>"><img width="360" height="140" src="/img/DR_image.jpg" class="attachment-blog-thumb wp-post-image" alt=""></a>
+                  <a href="students/<%= student.name%>"><img width="360" height="140" src="/img/<%=student.id%>.jpg" class="attachment-blog-thumb wp-post-image" alt=""></a>
                 </div>
 
                 <div class="blog-title">
